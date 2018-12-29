@@ -21,3 +21,30 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+## compression file ##
+*.apk
+
+## IDEA ##
+*.iml
+.idea
+test-output
+target
+
+##ignore this file##
+**/target/
+**/logs/
+
+.classpath
+.project
+.settings
+.metadata
+.svn
+
+##filter databfile.sln file##
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
