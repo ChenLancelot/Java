@@ -48,3 +48,6 @@ target
 *.exe
 *.o
 *.so
+
+##jvm out of memory##
+*.hprof
