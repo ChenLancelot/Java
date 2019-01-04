@@ -1,0 +1,4 @@
+1.设置堆内存参数: -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
+	-Xms20m -Xmx20m: 限制堆内存的最小、最大值
+	-XX:+HeapDumpOnOutOfMemoryError: 让堆内存在出现内存溢出异常时 Dump 出当前的内存堆转存储快照以便事后进行分析
+	
