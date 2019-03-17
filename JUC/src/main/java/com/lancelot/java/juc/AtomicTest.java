@@ -1,29 +1,29 @@
 package com.lancelot.java.juc;
  
 /** 
- Ò»¡¢i++ µÄÔ­×ÓĞÔÎÊÌâ£ºi++ µÄ²Ù×÷Êµ¼ÊÉÏ·ÖÎªÈı¸ö²½Öè¡°¶Á-¸Ä-Ğ´¡±
- * 		  int i = 10;
- * 		  i = i++; //10
- * 
- * 		  int temp = i;
- * 		  i = i + 1;
- * 		  i = temp;
- * 
- * ¶ş¡¢Ô­×Ó±äÁ¿£ºÔÚ java.util.concurrent.atomic °üÏÂÌá¹©ÁËÒ»Ğ©Ô­×Ó±äÁ¿¡£
- * 		1. volatile ±£Ö¤ÄÚ´æ¿É¼ûĞÔ
- * 		2. CAS£¨Compare-And-Swap£© Ëã·¨±£Ö¤Êı¾İ±äÁ¿µÄÔ­×ÓĞÔ
- * 			CAS Ëã·¨ÊÇÓ²¼ş¶ÔÓÚ²¢·¢²Ù×÷µÄÖ§³Ö
- * 			CAS °üº¬ÁËÈı¸ö²Ù×÷Êı£º
- * 			¢ÙÄÚ´æÖµ  V
- * 			¢ÚÔ¤¹ÀÖµ  A
- * 			¢Û¸üĞÂÖµ  B
- * 			µ±ÇÒ½öµ± V == A Ê±£¬ V = B; ·ñÔò£¬²»»áÖ´ĞĞÈÎºÎ²Ù×÷¡£
- * @author Lancelot Chen 
- * @date 2019Äê3ÔÂ1ÈÕ ÏÂÎç10:20:56
- * @Copyright£ºLancelot Chen¸öÈËËùÓĞ
- * @version 1.0 
- * @Description: TODO 
- */
+ä¸€ã€i++ çš„åŸå­æ€§é—®é¢˜ï¼ši++ çš„æ“ä½œå®é™…ä¸Šåˆ†ä¸ºä¸‰ä¸ªæ­¥éª¤â€œè¯»-æ”¹-å†™â€
+* 		  int i = 10;
+* 		  i = i++; //10
+* 
+* 		  int temp = i;
+* 		  i = i + 1;
+* 		  i = temp;
+* 
+* äºŒã€åŸå­å˜é‡ï¼šåœ¨ java.util.concurrent.atomic åŒ…ä¸‹æä¾›äº†ä¸€äº›åŸå­å˜é‡ã€‚
+* 		1. volatile ä¿è¯å†…å­˜å¯è§æ€§
+* 		2. CASï¼ˆCompare-And-Swapï¼‰ ç®—æ³•ä¿è¯æ•°æ®å˜é‡çš„åŸå­æ€§
+* 			CAS ç®—æ³•æ˜¯ç¡¬ä»¶å¯¹äºå¹¶å‘æ“ä½œçš„æ”¯æŒ
+* 			CAS åŒ…å«äº†ä¸‰ä¸ªæ“ä½œæ•°ï¼š
+* 			â‘ å†…å­˜å€¼  V
+* 			â‘¡é¢„ä¼°å€¼  A
+* 			â‘¢æ›´æ–°å€¼  B
+* 			å½“ä¸”ä»…å½“ V == A æ—¶ï¼Œ V = B; å¦åˆ™ï¼Œä¸ä¼šæ‰§è¡Œä»»ä½•æ“ä½œã€‚
+* @author Lancelot Chen 
+* @date 2019å¹´3æœˆ1æ—¥ ä¸‹åˆ10:20:56
+* @Copyrightï¼šLancelot Chenä¸ªäººæ‰€æœ‰
+* @version 1.0 
+* @Description: TODO 
+*/
 
 public class AtomicTest {
 
@@ -37,7 +37,7 @@ public class AtomicTest {
 	
 	static class AtomicDemo implements Runnable {
 		/*
-		 * Ê¹ÓÃintÀ´×ö i++ ²Ù×÷Ê±³öÏÖÁËÖØ¸´Êı¾İ
+		 * Ê¹ï¿½ï¿½intï¿½ï¿½ï¿½ï¿½ i++ ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½
 		 */
 		private int serialNumber = 0;
 		

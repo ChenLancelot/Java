@@ -1,14 +1,14 @@
 package com.lancelot.java.juc;
 /**
- * Ò»¡¢volatile ¹Ø¼ü×Ö£ºµ±¶à¸öÏß³Ì½øĞĞ²Ù×÷¹²ÏíÊı¾İÊ±£¬¿ÉÒÔ±£Ö¤ÄÚ´æÖĞµÄÊı¾İ¿É¼û¡£
- * 					  Ïà½ÏÓÚ synchronized ÊÇÒ»ÖÖ½ÏÎªÇáÁ¿¼¶µÄÍ¬²½²ßÂÔ¡£
+ * ä¸€ã€volatile å…³é”®å­—ï¼šå½“å¤šä¸ªçº¿ç¨‹è¿›è¡Œæ“ä½œå…±äº«æ•°æ®æ—¶ï¼Œå¯ä»¥ä¿è¯å†…å­˜ä¸­çš„æ•°æ®å¯è§ã€‚
+ * 					  ç›¸è¾ƒäº synchronized æ˜¯ä¸€ç§è¾ƒä¸ºè½»é‡çº§çš„åŒæ­¥ç­–ç•¥ã€‚
  * 
- * ×¢Òâ£º
- * 1. volatile ²»¾ß±¸¡°»¥³âĞÔ¡±
- * 2. volatile ²»ÄÜ±£Ö¤±äÁ¿µÄ¡°Ô­×ÓĞÔ¡±
+ * æ³¨æ„ï¼š
+ * 1. volatile ä¸å…·å¤‡â€œäº’æ–¥æ€§â€
+ * 2. volatile ä¸èƒ½ä¿è¯å˜é‡çš„â€œåŸå­æ€§â€
  * @author Lancelot Chen 
- * @date 2019Äê3ÔÂ1ÈÕ ÏÂÎç10:30:35
- * @Copyright£ºLancelot Chen¸öÈËËùÓĞ
+ * @date 2019å¹´3æœˆ1æ—¥ ä¸‹åˆ10:30:35
+ * @Copyrightï¼šLancelot Chenä¸ªäººæ‰€æœ‰
  * @version 1.0 
  * @Description: TODO
  */
@@ -29,7 +29,7 @@ public class VolatileTest {
 class ThreadDemo implements Runnable {
 
 	/*
-	 * ¼ÓÁËvolatile ºÍÃ»¼ÓÊÇÁ½ÖÖÌåÑé 
+	 * åŠ äº†volatile å’Œæ²¡åŠ æ˜¯ä¸¤ç§ä½“éªŒ 
 	 */
 //	private boolean flag = false;
 	private volatile boolean flag = false;

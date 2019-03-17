@@ -5,8 +5,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 
  * @author Lancelot Chen 
- * @date 2019Äê3ÔÂ1ÈÕ ÏÂÎç10:24:05
- * @Copyright£ºLancelot Chen¸öÈËËùÓĞ
+ * @date 2019å¹´3æœˆ1æ—¥ ä¸‹åˆ10:24:05
+ * @Copyrightï¼šLancelot Chenä¸ªäººæ‰€æœ‰
  * @version 1.0 
  * @Description: TODO
  */
@@ -24,7 +24,7 @@ public class Atomic2Test {
 	
 	static class AtomicDemo implements Runnable {
 		/*
-		 * Ê¹ÓÃintÀ´×ö i++ ²Ù×÷Ê±³öÏÖÁËÖØ¸´Êı¾İ
+		 * Ê¹ï¿½ï¿½intï¿½ï¿½ï¿½ï¿½ i++ ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½
 		 */
 		private AtomicInteger serialNumber = new AtomicInteger(0);
 		

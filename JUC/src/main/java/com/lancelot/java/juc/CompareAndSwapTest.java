@@ -1,9 +1,9 @@
 package com.lancelot.java.juc;
 /**
- * Ä£ÄâCASËã·¨
+ * æ¨¡æ‹ŸCASç®—æ³•
  * @author Lancelot Chen 
- * @date 2019Äê3ÔÂ1ÈÕ ÏÂÎç11:01:47
- * @Copyright£ºLancelot Chen¸öÈËËùÓĞ
+ * @date 2019å¹´3æœˆ1æ—¥ ä¸‹åˆ11:01:47
+ * @Copyrightï¼šLancelot Chenä¸ªäººæ‰€æœ‰
  * @version 1.0 
  * @Description: TODO
  */
@@ -41,7 +41,7 @@ public class CompareAndSwapTest {
 			return oldValue;
 		}
 		
-		//ÉèÖÃ
+		//ï¿½ï¿½ï¿½ï¿½
 		public synchronized boolean compareAndSet(int expectedValue, int newValue){
 			return expectedValue == compareAndSwap(expectedValue, newValue);
 		}
