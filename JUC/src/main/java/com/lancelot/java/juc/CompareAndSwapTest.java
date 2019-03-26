@@ -27,11 +27,11 @@ public class CompareAndSwapTest {
 	
 	static class CompareAndSwap {
 		private int value;
-		
+		//获取内存值
 		public synchronized int get() {
 			return value;
 		}
-		
+		//比较
 		public synchronized int compareAndSwap(int expectValue, int newValue) {
 			int oldValue = value;
 			
@@ -41,7 +41,7 @@ public class CompareAndSwapTest {
 			return oldValue;
 		}
 		
-		//����
+		//设置
 		public synchronized boolean compareAndSet(int expectedValue, int newValue){
 			return expectedValue == compareAndSwap(expectedValue, newValue);
 		}

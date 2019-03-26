@@ -22,7 +22,6 @@ package com.lancelot.java.juc;
 * @date 2019年3月1日 下午10:20:56
 * @Copyright：Lancelot Chen个人所有
 * @version 1.0 
-* @Description: TODO 
 */
 
 public class AtomicTest {
@@ -37,7 +36,7 @@ public class AtomicTest {
 	
 	static class AtomicDemo implements Runnable {
 		/*
-		 * ʹ��int���� i++ ����ʱ�������ظ�����
+		 * 因为 i++ 不是原子性操作，所以会出问题
 		 */
 		private int serialNumber = 0;
 		

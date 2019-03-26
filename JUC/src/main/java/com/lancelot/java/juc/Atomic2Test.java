@@ -24,7 +24,7 @@ public class Atomic2Test {
 	
 	static class AtomicDemo implements Runnable {
 		/*
-		 * ʹ��int���� i++ ����ʱ�������ظ�����
+		 * ʹ使用AtomicInteger不会出问题
 		 */
 		private AtomicInteger serialNumber = new AtomicInteger(0);
 		

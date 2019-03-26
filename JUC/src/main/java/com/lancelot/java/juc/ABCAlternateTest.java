@@ -11,7 +11,6 @@ import java.util.concurrent.locks.ReentrantLock;
  * @date 2019年3月10日 下午10:29:49
  * @Copyright：Lancelot Chen个人所有
  * @version 1.0 
- * @Description: TODO
  */
 public class ABCAlternateTest {
 
