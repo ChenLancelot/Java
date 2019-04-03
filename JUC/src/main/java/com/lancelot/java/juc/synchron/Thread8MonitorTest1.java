@@ -1,4 +1,4 @@
-package com.lancelot.java.juc;
+package com.lancelot.java.juc.synchron;
 /**
  * 1. 两个普通同步方法，两个线程，标准打印， 打印? //one  two
  * @author Lancelot Chen 

@@ -1,4 +1,4 @@
-package com.lancelot.java.juc;
+package com.lancelot.java.juc.threadpool;
 
 import java.util.ArrayList;
 import java.util.List;

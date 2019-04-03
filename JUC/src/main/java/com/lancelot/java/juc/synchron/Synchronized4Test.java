@@ -1,4 +1,4 @@
-package com.lancelot.java.juc;
+package com.lancelot.java.juc.synchron;
 /**
  * 修饰一个静态的方法
  * syncThread1和syncThread2是SyncThread的两个对象，但在thread1和thread2并发执行时却保持了线程同步。

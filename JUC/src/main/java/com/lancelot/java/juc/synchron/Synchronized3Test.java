@@ -1,4 +1,4 @@
-package com.lancelot.java.juc;
+package com.lancelot.java.juc.synchron;
 /**
  * 指定要给某个对象加锁
  * @author Lancelot Chen 

@@ -1,4 +1,4 @@
-package com.lancelot.java.juc;
+package com.lancelot.java.juc.threadpool;
 
 import java.util.Random;
 import java.util.concurrent.Callable;

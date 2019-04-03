@@ -1,4 +1,4 @@
-package com.lancelot.java.juc;
+package com.lancelot.java.juc.synchron;
 
 /**
  * 给class加锁和上例的给静态方法加锁是一样的，所有对象公用一把锁
