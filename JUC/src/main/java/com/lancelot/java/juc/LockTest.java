@@ -25,9 +25,9 @@ public class LockTest {
 	public static void main(String[] args) {
 		Ticket ticket = new Ticket();
 		
-		new Thread(ticket, "1�Ŵ���").start();
-		new Thread(ticket, "2�Ŵ���").start();
-		new Thread(ticket, "3�Ŵ���").start();
+		new Thread(ticket, "1号窗口").start();
+		new Thread(ticket, "2号窗口").start();
+		new Thread(ticket, "3号窗口").start();
 	}
 	
 	private static class Ticket implements Runnable{
@@ -40,7 +40,7 @@ public class LockTest {
 		public void run() {
 			while(true){
 				
-				lock.lock(); //����
+				lock.lock(); //上锁
 				
 				try{
 					if(tick > 0){
@@ -49,10 +49,10 @@ public class LockTest {
 						} catch (InterruptedException e) {
 						}
 						
-						System.out.println(Thread.currentThread().getName() + " �����Ʊ����ƱΪ��" + --tick);
+						System.out.println(Thread.currentThread().getName() + " 完成售票，余票为：" + --tick);
 					}
 				}finally{
-					lock.unlock(); //�ͷ���
+					lock.unlock(); //释放锁
 				}
 			}
 		}

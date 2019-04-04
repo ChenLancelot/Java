@@ -17,14 +17,14 @@ public class CallableTest {
 	public static void main(String[] args) {
 		ThreadDemo td = new ThreadDemo();
 
-		//1.ִ�� Callable ��ʽ����Ҫ FutureTask ʵ�����֧�֣����ڽ�����������
+		//1.执行 Callable 方式，需要 FutureTask 实现类的支持，用于接收运算结果。
 		FutureTask<Integer> result = new FutureTask<>(td);
 		
 		new Thread(result).start();
 		
-		//2.�����߳������Ľ��
+		//2.接收线程运算后的结果
 		try {
-			Integer sum = result.get();  //FutureTask ������ ����
+			Integer sum = result.get();  //FutureTask 可用于 闭锁
 			System.out.println(sum);
 			System.out.println("------------------------------------");
 		} catch (InterruptedException | ExecutionException e) {

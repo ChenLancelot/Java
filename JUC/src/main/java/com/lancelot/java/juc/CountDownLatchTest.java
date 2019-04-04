@@ -24,12 +24,12 @@ public class CountDownLatchTest {
 		try {
 			latch.await();
 		} catch (InterruptedException e) {
+			
 		}
 
 		long end = System.currentTimeMillis();
 
-		System.out.println("�ķ�ʱ��Ϊ��" + (end - start));
-		
+		System.out.println("耗费时间为：" + (end - start));		
 	}
 	
 	
@@ -47,9 +47,10 @@ public class CountDownLatchTest {
 			try {
 				for (int i = 0; i < 50000; i++) {
 					if (i % 2 == 0) {
-						System.out.println(i);
+//						System.out.println(i);
 					}
 				}
+				System.out.println(Thread.currentThread().getName());
 			} finally {
 				latch.countDown();
 			}

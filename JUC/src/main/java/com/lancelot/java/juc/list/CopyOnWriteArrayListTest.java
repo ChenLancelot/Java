@@ -1,4 +1,4 @@
-package com.lancelot.java.juc;
+package com.lancelot.java.juc.list;
 
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -24,7 +24,6 @@ public class CopyOnWriteArrayListTest {
 	
 	private static class HelloThread  implements Runnable{
 		
-		// ʹ���������ֱ����޸��쳣
 		//private static List<String> list = Collections.synchronizedList(new ArrayList<String>());
 		
 		private static CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
