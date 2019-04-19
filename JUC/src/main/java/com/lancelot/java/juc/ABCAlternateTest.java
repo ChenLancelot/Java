@@ -56,7 +56,7 @@ public class ABCAlternateTest {
 	
 	private static class AlternateDemo {
 		
-		private int number = 1; // ��ǰ����ִ���̵߳ı��
+		private int number = 1; // 当前正在执行线程的标记
 		
 		private Lock lock = new ReentrantLock();
 		private Condition condition1 = lock.newCondition();
@@ -67,17 +67,17 @@ public class ABCAlternateTest {
 			lock.lock();
 			
 			try {
-				//1. �ж�
+				//1. 判断
 				if(number != 1){
 					condition1.await();
 				}
 				
-				//2. ��ӡ
+				//2. 打印
 				for (int i = 1; i <= 1; i++) {
 					System.out.println(Thread.currentThread().getName() + "\t" + i + "\t" + totalLoop);
 				}
 				
-				//3. ����
+				//3. 唤醒
 				number = 2;
 				condition2.signal();
 			} catch (Exception e) {
@@ -92,17 +92,17 @@ public class ABCAlternateTest {
 			lock.lock();
 			
 			try {
-				//1. �ж�
+				//1. 判断
 				if(number != 2){
 					condition2.await();
 				}
 				
-				//2. ��ӡ
+				//2. 打印
 				for (int i = 1; i <= 1; i++) {
 					System.out.println(Thread.currentThread().getName() + "\t" + i + "\t" + totalLoop);
 				}
 				
-				//3. ����
+				//3. 唤醒
 				number = 3;
 				condition3.signal();
 			} catch (Exception e) {
@@ -116,17 +116,17 @@ public class ABCAlternateTest {
 			lock.lock();
 			
 			try {
-				//1. �ж�
+				//1. 判断
 				if(number != 3){
 					condition3.await();
 				}
 				
-				//2. ��ӡ
+				//2. 打印
 				for (int i = 1; i <= 1; i++) {
 					System.out.println(Thread.currentThread().getName() + "\t" + i + "\t" + totalLoop);
 				}
 				
-				//3. ����
+				//3. 唤醒
 				number = 1;
 				condition1.signal();
 			} catch (Exception e) {
@@ -137,11 +137,4 @@ public class ABCAlternateTest {
 		}
 		
 	}
-	
 }
-
-
-
-
-
-

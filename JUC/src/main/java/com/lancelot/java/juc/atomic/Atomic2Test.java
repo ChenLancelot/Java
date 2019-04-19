@@ -1,4 +1,4 @@
-package com.lancelot.java.juc;
+package com.lancelot.java.juc.atomic;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

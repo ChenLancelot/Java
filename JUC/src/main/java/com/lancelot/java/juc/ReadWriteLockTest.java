@@ -12,7 +12,6 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * @date 2019年3月10日 下午10:40:53
  * @Copyright：Lancelot Chen个人所有
  * @version 1.0 
- * @Description: TODO
  */
 public class ReadWriteLockTest {
 	

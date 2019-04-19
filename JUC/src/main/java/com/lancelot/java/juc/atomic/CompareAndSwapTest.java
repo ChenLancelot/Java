@@ -1,4 +1,4 @@
-package com.lancelot.java.juc;
+package com.lancelot.java.juc.atomic;
 /**
  * 模拟CAS算法
  * @author Lancelot Chen 

@@ -16,21 +16,21 @@ public class ProductorAndConsumer {
 		Productor pro = new Productor(clerk);
 		Consumer cus = new Consumer(clerk);
 		
-		new Thread(pro, "������ A").start();
-		new Thread(cus, "������ B").start();
+		new Thread(pro, "生产者 A").start();
+		new Thread(cus, "消费者 B").start();
 		
-		new Thread(pro, "������ C").start();
-		new Thread(cus, "������ D").start();
+		new Thread(pro, "生产者 C").start();
+		new Thread(cus, "消费者 D").start();
 	}
 	
-	//��Ա
+	// 店员
 	private static class Clerk{
 		private int product = 0;
 		
-		//����
-		public synchronized void get(){//ѭ��������0
-			while(product >= 1){//Ϊ�˱�����ٻ������⣬Ӧ������ʹ����ѭ����
-				System.out.println("��Ʒ������");
+		// 进货
+		public synchronized void get(){// 循环次数：0
+			while(product >= 1){// 为了避免虚假唤醒问题，应该总是使用在循环中
+				System.out.println("产品已满!");
 				
 				try {
 					this.wait();
@@ -43,10 +43,10 @@ public class ProductorAndConsumer {
 			this.notifyAll();
 		}
 		
-		//����
-		public synchronized void sale(){//product = 0; ѭ��������0
+		// 卖货
+		public synchronized void sale(){//product = 0; 循环次数：0
 			while(product <= 0){
-				System.out.println("ȱ����");
+				System.out.println("缺货!");
 				
 				try {
 					this.wait();
@@ -59,7 +59,7 @@ public class ProductorAndConsumer {
 		}
 	}
 	
-	//������
+	// 生产者
 	private static class Productor implements Runnable{
 		private Clerk clerk;
 
@@ -80,7 +80,7 @@ public class ProductorAndConsumer {
 		}
 	}
 	
-	//������
+	// 消费者
 	private static class Consumer implements Runnable{
 		private Clerk clerk;
 

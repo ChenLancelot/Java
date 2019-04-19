@@ -1,4 +1,4 @@
-package com.lancelot.java.juc;
+package com.lancelot.java.juc.atomic;
  
 /** 
 一、i++ 的原子性问题：i++ 的操作实际上分为三个步骤“读-改-写”

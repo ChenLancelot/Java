@@ -19,11 +19,11 @@ public class ProductorAndConsumerForLockTest {
 		Productor pro = new Productor(clerk);
 		Consumer con = new Consumer(clerk);
 
-		new Thread(pro, "������ A").start();
-		new Thread(con, "������ B").start();
+		new Thread(pro, "生产者 A").start();
+		new Thread(con, "消费者 B").start();
 
-//		 new Thread(pro, "������ C").start();
-//		 new Thread(con, "������ D").start();
+//		 new Thread(pro, "生产者 C").start();
+//		 new Thread(con, "消费者 D").start();
 	}
 	
 
@@ -33,13 +33,13 @@ public class ProductorAndConsumerForLockTest {
 		private Lock lock = new ReentrantLock();
 		private Condition condition = lock.newCondition();
 	
-		// ����
+		// 进货
 		public void get() {
 			lock.lock();
 	
 			try {
-				if (product >= 1) { // Ϊ�˱�����ٻ��ѣ�Ӧ������ʹ����ѭ���С�
-					System.out.println("��Ʒ������");
+				if (product >= 1) { // 为了避免虚假唤醒，应该总是使用在循环中。
+					System.out.println("产品已满！");
 	
 					try {
 						condition.await();
@@ -57,13 +57,13 @@ public class ProductorAndConsumerForLockTest {
 	
 		}
 	
-		// ����
+		// 卖货
 		public void sale() {
 			lock.lock();
 	
 			try {
 				if (product <= 0) {
-					System.out.println("ȱ����");
+					System.out.println("缺货！");
 	
 					try {
 						condition.await();
@@ -82,7 +82,7 @@ public class ProductorAndConsumerForLockTest {
 		}
 	}
 	
-	// ������
+	// 生产者
 	private static class Productor implements Runnable {
 	
 		private Clerk clerk;
@@ -105,7 +105,7 @@ public class ProductorAndConsumerForLockTest {
 		}
 	}
 	
-	// ������
+	// 消费者
 	private static class Consumer implements Runnable {
 	
 		private Clerk clerk;
