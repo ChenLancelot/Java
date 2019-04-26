@@ -22,10 +22,12 @@ public class HeapOOM {
 		
 		List<OOMObject> list = new ArrayList<OOMObject>();
 		
-		while(true) {
-			list.add(new OOMObject());
-		}
 		
+		System.gc();
+//		while(true) {
+//			list.add(new OOMObject());
+//		}
+//		
 	}
 	
 }
