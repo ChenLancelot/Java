@@ -51,6 +51,7 @@ public class ThreadLocalTest4 {
 					Counter.counter.get().toString());
 		}
 		
+		
 	}
 	
 	private static class Counter {
