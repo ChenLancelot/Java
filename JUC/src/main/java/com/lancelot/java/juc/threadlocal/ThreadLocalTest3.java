@@ -1,15 +1,23 @@
-package com.lancelot.java.juc.threadlocale;
+package com.lancelot.java.juc.threadlocal;
 /**
- * 正常使用的 ThreadLocale
+ * 在进行get之前，必须先set，否则会报空指针异常
  * @author Lancelot Chen 
  * @date 2019年4月26日 下午2:42:22
  * @Copyright：Lancelot Chen个人所有
  * @version 1.0 
  */
-public class ThreadLocalTest2 {
+public class ThreadLocalTest3 {
 
-	ThreadLocal<Long> longLocal = new ThreadLocal<Long>();
-    ThreadLocal<String> stringLocal = new ThreadLocal<String>();
+	ThreadLocal<Long> longLocal = new ThreadLocal<Long>() {
+		protected Long initialValue() {
+			return Thread.currentThread().getId();
+		};
+	};
+    ThreadLocal<String> stringLocal = new ThreadLocal<String>() {
+    	protected String initialValue() {
+    		return Thread.currentThread().getName();
+    	};
+    };
 	
     public void set() {
         longLocal.set(Thread.currentThread().getId());
@@ -25,8 +33,7 @@ public class ThreadLocalTest2 {
     }
     
     public static void main(String[] args) throws Exception {
-    	final ThreadLocalTest2 test = new ThreadLocalTest2();
-        
+    	final ThreadLocalTest3 test = new ThreadLocalTest3();
         
 //        test.set();
         System.out.println(test.getLong());

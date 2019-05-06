@@ -1,4 +1,4 @@
-package com.lancelot.java.juc.threadlocale;
+package com.lancelot.java.juc.threadlocal;
 
 import java.util.concurrent.CountDownLatch;
 

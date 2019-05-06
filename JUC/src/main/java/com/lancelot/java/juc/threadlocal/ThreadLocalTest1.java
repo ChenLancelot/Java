@@ -1,4 +1,4 @@
-package com.lancelot.java.juc.threadlocale;
+package com.lancelot.java.juc.threadlocal;
 /**
  * 正常使用的 ThreadLocal
  * @author Lancelot Chen 

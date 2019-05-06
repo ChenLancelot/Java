@@ -1,4 +1,4 @@
-package com.lancelot.java.juc.threadlocale;
+package com.lancelot.java.juc.threadlocal;
 /**
  * 在进行get之前，必须先set，否则会报空指针异常
  * @author Lancelot Chen 
@@ -6,18 +6,10 @@ package com.lancelot.java.juc.threadlocale;
  * @Copyright：Lancelot Chen个人所有
  * @version 1.0 
  */
-public class ThreadLocalTest3 {
+public class ThreadLocalTest2 {
 
-	ThreadLocal<Long> longLocal = new ThreadLocal<Long>() {
-		protected Long initialValue() {
-			return Thread.currentThread().getId();
-		};
-	};
-    ThreadLocal<String> stringLocal = new ThreadLocal<String>() {
-    	protected String initialValue() {
-    		return Thread.currentThread().getName();
-    	};
-    };
+	ThreadLocal<Long> longLocal = new ThreadLocal<Long>();
+    ThreadLocal<String> stringLocal = new ThreadLocal<String>();
 	
     public void set() {
         longLocal.set(Thread.currentThread().getId());
@@ -33,7 +25,8 @@ public class ThreadLocalTest3 {
     }
     
     public static void main(String[] args) throws Exception {
-    	final ThreadLocalTest3 test = new ThreadLocalTest3();
+    	final ThreadLocalTest2 test = new ThreadLocalTest2();
+        
         
 //        test.set();
         System.out.println(test.getLong());
