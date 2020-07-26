@@ -55,5 +55,3 @@ target
 ##about jvm##
 *.index
 *.threads
-
-##test
